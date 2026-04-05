@@ -47,4 +47,4 @@ jobs:
 
     steps:
       - name: Deploy Prod
-        run: echo "Deploying on Prod environment"
+        run: echo "Deploying on Prod environment v2"
