@@ -10,7 +10,7 @@ variable "location" {
   default     = "East US"
 }
 
-variable "admin_password" {
+variable "ADMIN_PASSWORD" {
   description = "Senha do usuário administrador"
   type        = string
   sensitive   = true
