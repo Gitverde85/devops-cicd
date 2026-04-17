@@ -124,7 +124,7 @@ jobs:
             echo "❌ Swagger não respondeu como esperado. Status HTTP: $response"
             exit 1
           else
-            echo "✅ Swagger disponível em /swagger-ui/index.html na porta 8081!"
+            echo "✅ Swagger available em /swagger-ui/index.html na porta 8081!"
           fi
 
       - name: Verificar status da VM
