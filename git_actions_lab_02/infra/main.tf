@@ -1,5 +1,10 @@
 provider "azurerm" {
-  features {}
+  features {
+    resource_group {
+      prevent_deletion_if_contains_resources = false
+    }
+  }
+  subscription_id = var.subscription_id  
 }
 
 resource "azurerm_resource_group" "rg" {
@@ -85,7 +90,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   location                        = azurerm_resource_group.rg.location
   size                            = "Standard_B1s"
   admin_username                  = "azureuser"
-  admin_password                  = var.ADMIN_PASSWORD
+  admin_password                  = var.admin_password
   disable_password_authentication = false
 
   network_interface_ids = [
